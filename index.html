@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Tripple Play</h1>
+
+<button onclick="myFunction()">Click me</button>
+
+<p id="demo"></p>
+
+
+
+<script>
+function randFunction() {
+  const rndInt = Math.floor(Math.random() * 20) + 1
+  return rndInt
+}
+
+function myFunction() {
+  let text = ""
+  for (let i = 1; i < 7; i++) {
+  text += "Round " + i + "<br>"
+  text += "The targets are\xa0\xa0" + randFunction() + "\xa0\xa0" + randFunction() + "\xa0\xa0" + randFunction()+"<br>"+"<br>";
+  }
+  document.getElementById("demo").innerHTML = text;
+}
+
+
+</script>
+
+</body>
+</html>
